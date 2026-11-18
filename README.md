@@ -22,7 +22,7 @@ aietics_2026/
 │  ├─ apps-script/       Apps Script 에 붙여넣을 Code.gs · Core.gs · Index.html
 │  └─ preview.html       브라우저로 바로 여는 데모
 ├─ tools/ppt/            화면 검토용 PPT 만들기 (npm run ppt)
-├─ docs/                 PRD, 설치 안내
+├─ docs/                 PRD, 설치 안내, index.html(Pages 공개용 데모, 빌드가 만듦)
 └─ CLAUDE.md             Claude Code 작업 규칙
 ```
 
