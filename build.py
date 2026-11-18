@@ -5,6 +5,7 @@ src/ 의 원본을 합쳐 아래 파일을 만듭니다.
   dist/apps-script/Core.gs     진행 규칙 (src/core.js 그대로)
   dist/apps-script/Index.html  Apps Script 화면 (앱 코드는 Base64로 묶음)
   dist/preview.html            브라우저로 바로 여는 데모 (앱 코드 그대로)
+  docs/index.html              GitHub Pages 공개용 데모 (preview.html 과 같은 내용)
 
 사용법:  python build.py
 """
@@ -94,6 +95,7 @@ wr(os.path.join(GAS, 'Index.html'), index_html)
 wr(os.path.join(GAS, 'Core.gs'), core)
 shutil.copyfile(os.path.join(SRC, 'Code.gs'), os.path.join(GAS, 'Code.gs'))
 wr(os.path.join(OUT, 'preview.html'), preview_html)
+wr(os.path.join(ROOT, 'docs', 'index.html'), preview_html)
 
 # Node 가 있으면 문법 검사
 check = os.path.join(OUT, '.check.js')
@@ -109,4 +111,4 @@ except FileNotFoundError:
 finally:
     os.remove(check)
 
-print('빌드 완료: dist/apps-script/{Code.gs, Core.gs, Index.html}, dist/preview.html')
+print('빌드 완료: dist/apps-script/{Code.gs, Core.gs, Index.html}, dist/preview.html, docs/index.html')
